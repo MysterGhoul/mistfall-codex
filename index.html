@@ -126,10 +126,10 @@
   .kicker .rule{height:1px;flex:0 0 44px;background:var(--gold);opacity:.6;}
 
   /* ---------- Facts strip ---------- */
-  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
+  .facts{position:relative;z-index:2;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
     background:var(--line);border-block:1px solid var(--line);margin-top:clamp(40px,7vh,72px);}
   .fact{background:var(--bg);padding:20px clamp(16px,2.4vw,28px);}
-  .fact .label{display:block;margin-bottom:.5rem;}
+  .fact .label{display:block;margin-bottom:.5rem;color:var(--ink-dim);}
   .fact .val{font-family:"Cormorant",serif;font-size:1.32rem;font-weight:600;color:var(--ink);line-height:1.2;}
   .fact .val.sm{font-size:1.08rem;}
 
@@ -253,9 +253,17 @@
   .toggle:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
 
   @media (max-width:640px){
-    body{font-size:17px;}
+    body{font-size:18px;}
+    .wrap{padding:0 18px;}
+    .hero h1{font-size:clamp(3rem,15vw,4.2rem);}
+    .hero-lede{font-size:1.2rem;}
+    .sec-head h2{font-size:2rem;}
+    .facts{grid-template-columns:repeat(2,1fr);}
+    .fact .val{font-size:1.18rem;}
+    .lead{font-size:1.14rem;}
+    .card h3,.tl h3{font-size:1.4rem;}
     footer .src-list{columns:1;}
-    blockquote p{font-size:1.28rem;}
+    blockquote p{font-size:1.3rem;}
   }
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}}
 </style>
