@@ -264,6 +264,15 @@
   .toggle.home{color:var(--gold-lit);border-color:var(--gold-deep);}
   .toggle:hover{color:var(--gold-lit);border-color:var(--gold);}
   .toggle:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+  .updated-badge{position:fixed;top:16px;left:16px;z-index:40;display:inline-flex;align-items:center;gap:8px;
+    background:var(--panel);border:1px solid var(--gold-deep);color:var(--gold-lit);
+    font-family:"Space Mono",monospace;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;
+    padding:7px 12px;border-radius:2px;box-shadow:var(--shadow);text-decoration:none;}
+  .updated-badge:hover{border-color:var(--gold);color:var(--gold-lit);}
+  .updated-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);
+    box-shadow:0 0 0 0 var(--gold);animation:pulseDot 2.4s ease-out infinite;}
+  @keyframes pulseDot{0%{box-shadow:0 0 0 0 rgba(200,162,76,.55);}70%{box-shadow:0 0 0 7px rgba(200,162,76,0);}100%{box-shadow:0 0 0 0 rgba(200,162,76,0);}}
+  @media (prefers-reduced-motion:reduce){ .updated-badge .dot{animation:none;} }
 
   @media (max-width:640px){
     body{font-size:18px;}
@@ -280,6 +289,8 @@
   }
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}}
 </style>
+
+<a class="updated-badge" href="#soulhunt" title="See the latest additions — Soul Hunt: Torrent"><span class="dot" aria-hidden="true"></span>Updated Aug 22, 2026</a>
 
 <div class="topbar">
   <a class="toggle home" href="https://ghoulxghoul.com" target="_blank" rel="noopener">GhoulxGhoul ↗</a>
